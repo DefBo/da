@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Wix Test by BoAndriiv</title>
+	<meta name="description" content="Wix Test by Bohdan Andriiv">
+
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<header class="da-header">
+
+		<!--Deviant Art Logo-->
+		<a href="#" class="da-logo__link">
+			<svg class="da-logo__img" width="819.25" height="206.46" version="1.1" viewBox="0 0 819.2547 206.45734" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="a"><path d="M 0,154.843 H 614.441 V 0 H 0 Z"/></clipPath></defs><g transform="matrix(1.3333 0 0 -1.3333 0 206.46)"><g transform="translate(95.826 154.84)"><path d="m0 0h-28.144l-2.81-2.833-13.284-25.315-4.177-2.819h-47.411v-38.661h26.065l2.321-2.808-28.386-54.242v-28.153h28.152l2.81 2.833 13.284 25.316 4.177 2.818h47.412v38.66h-26.065l-2.319 2.828 28.384 54.224v28.152z" fill="#05cc47"/></g><g transform="translate(151.62 69.63)"><path d="m0 0-36.434-69.624h21.62l5.287 10.132 24.412 1e-3 2.416-10.133h21.618l-16.663 69.624zm7.218-27.495 3.691-15.266h-11.688z" fill="currentColor"/></g><g clip-path="url(#a)"><g transform="translate(224.54 37.082)"><path d="m0 0h-9.237v14.077h9.237c5.628 0 7.766-2.816 7.766-7.095 0-4.168-2.138-6.982-7.766-6.982m28.941 7.326c0 15.987-10.813 25.223-26.015 25.223h-32.99v-69.63h20.827v20.308h5.068l4.136 0.011 10.084-20.319h21.621l-12.858 24.568c6.307 4.017 10.127 10.826 10.127 19.839" fill="currentColor"/></g><g transform="translate(256.56 69.63)"><path d="m0 0v-18.458h19.68v-51.172h11.858l8.954 17.128v34.044h17.848l9.651 18.458z" fill="currentColor"/></g><path d="m373.24 85.217h20.808v69.621h-20.808z" fill="currentColor"/><g transform="translate(196.25 154.8)"><path d="m0 0-9.35-17.851h5.742c10.25 0 16.739-6.551 16.739-16.916 0-10.244-6.489-16.797-16.739-16.797h-6.489v32.288l-20.129-38.428v-11.871h28.005c22.567 0 35.832 13.607 35.832 34.809 0 20.501-12.4 33.895-33.611 34.766" fill="currentColor"/></g><g transform="translate(235.37 85.217)"><path d="m0 0h53.144v18.455h-32.337v7.524h29.73v17.665h-29.73v7.521h32.337v18.456h-53.144z" fill="currentColor"/></g><g transform="translate(325.51 112.71)"><path d="m0 0-10.086 42.13h-21.598l16.672-69.618h22.218l36.467 69.618h-21.622z" fill="currentColor"/></g><g transform="translate(546.45 154.84)"><path d="m0 0v-18.458h19.679v-51.172h11.859l8.953 17.128v34.044h17.849l9.65 18.458z" fill="currentColor"/></g><g transform="translate(433.75 112.08)"><path d="m0 0 7.985 15.251 3.689-15.251zm0.81 42.761-36.443-69.618h21.584l5.306 10.143 24.388 1e-3 2.421-10.144 21.59-2e-3 -16.663 69.62z" fill="currentColor"/></g><g transform="translate(521.19 121.86)"><path d="m0 0-23.305 32.979h-20.521v-69.621h20.802v35.358l25.799-35.358h18.028v69.621h-20.803z" fill="currentColor"/></g></g></g></svg>
+		</a>
+
+		<!--Navigation-->
+		<section class="da-nav">
+			<a onclick="showNav()" class="da-nav__burger-btn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+			</a>
+
+			<nav class="da-nav__inner">
+				<a href="#" class="da-nav__item da-nav__item_active">Browse</a>
+				<a href="#" class="da-nav__item">Watch</a>
+				<a href="#" class="da-nav__item">Shop</a>
+				<a href="#" class="da-nav__item">Groups</a>
+				<a href="#" class="da-nav__item">Forum</a>
+
+				<a onclick="hideNav()" class="da-nav__close-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+				</a>
+			</nav>
+		</section>
+
+		<section class="da-user-actions">
+			<a href="#" class="da-user-actions__item">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+			</a>
+			<a href="#" class="da-user-actions__item">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+			</a>
+			<a href="#" class="da-user-actions__item">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+			</a>
+			<a href="#" class="da-user-actions__item">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+			</a>
+
+			<div class="da-user-actions__item da-user-actions__item_user" onclick="toggleItemActive(this)">
+				<img class="da-user-actions__img"
+					src="img/@1x/da-avatar.jpg"
+					srcset="img/@1x/da-avatar.jpg 1x, img/@2x/da-avatar.jpg 2x"
+					alt="User Avatar">
+				<i class="da-user-actions__item-premium">
+					<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="#f05c0e" stroke="#f05c0e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+				</i>
+
+                <!--User options dropdown-->
+				<div class="da-user-dropdown">
+					<label class="da-switch">
+						<input class="da-switch__input" type="checkbox" onclick="switchToLightTheme()">
+						<span class="da-switch__slider round"></span>
+					</label>
+				</div>
+			</div>
+
+		</section>
+
+		<a href="#" class="da-btn da-btn_brand">Submit</a>
+
+	</header>
+
+	<section class="da-content">
+
+		<section class="da-main">
+
+			<section class="da-backto">
+				<div class="da-backto__wrap">
+					<p class="da-backto__text">Back to</p>
+					<a href="#" class="da-backto__link">Gallery</a>
+				</div>
+				<div class="da-backto__buttons">
+					<a href="#" class="da-backto__buttons-item da-backto__buttons-item_fav" onclick="toggleItemActive(this)">
+						<i class="da-backto__buttons-item-i">
+							<svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+						</i>
+					</a>
+					<a href="#" class="da-backto__buttons-item da-backto__buttons-item_coll" onclick="showModal()">
+						Add To Collection
+					</a>
+				</div>
+			</section>
+
+            <!--Slider-->
+			<section class="da-slider">
+				<div class="da-slider__wrap">
+					<div class="da-slider__inner">
+
+						<!--Slide item-->
+						<div class="da-slider__item">
+							<img class="da-slider__item-img"
+								 src="img/@1x/legend-001.jpg"
+								 srcset="img/@1x/legend-001.jpg 1x, img/@2x/legend-001.jpg 2x"
+								 alt="Spaceman with a beautiful background">
+						</div>
+
+						<!--Slide item-->
+						<div class="da-slider__item">
+							<img class="da-slider__item-img"
+								 src="img/@1x/legend-002.jpg"
+								 srcset="img/@1x/legend-002.jpg 1x, img/@2x/legend-002.jpg 2x"
+								 alt="Spaceman with a beautiful background">
+						</div>
+
+						<!--Slide item-->
+						<div class="da-slider__item">
+							<img class="da-slider__item-img"
+								 src="img/@1x/legend-003.jpg"
+								 srcset="img/@1x/legend-003.jpg 1x, img/@2x/legend-003.jpg 2x"
+								 alt="Spaceman with a beautiful background">
+						</div>
+
+						<!--Slider's "previous" button-->
+						<a class="da-slider__btn da-slider__btn_prev" onclick="plusSlides(-1)">
+							<i class="da-slider__i">
+								<svg fill="currentColor" viewBox="0 0 14 29" width="100%" height="100%"><g>
+									<polygon points="2.8,0 0,2.8 9,14.5 0,26.2 2.8,29 14,14.5"></polygon>
+								</g></svg>
+							</i>
+						</a>
+
+						<!--Slider's "next" button-->
+						<a class="da-slider__btn da-slider__btn_next" onclick="plusSlides(1)">
+							<i class="da-slider__i">
+								<svg fill="currentColor" viewBox="0 0 14 29" width="100%" height="100%"><g>
+									<polygon points="2.8,0 0,2.8 9,14.5 0,26.2 2.8,29 14,14.5"></polygon>
+								</g></svg>
+							</i>
+						</a>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="da-interactions">
+
+				<div class="da-interactions__award">
+					<i class="da-interactions__award-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18px" height="20px" fill="#fff" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve"><path d="M13 0h-3L8.526 2.737a.5.5 0 0 1-.44.263H3v4h2.394a.5.5 0 0 1 .44.737L3 13v3h3l1.474-2.737a.5.5 0 0 1 .44-.263H13V9h-2.394a.5.5 0 0 1-.44-.737L13 3V0z"/></svg>
+					</i>
+					<p class="da-interactions__award-text">Daily<br>Deviation</p>
+				</div>
+
+				<div class="da-interactions__main">
+					<div class="da-interactions__main-shortcuts">
+
+						<div class="da-interactions__main-shortcuts-item">
+							<a href="" class="da-interactions__main-shortcuts-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+							</a>
+							<span class="da-interactions__main-shortcuts-count">321</span>
+						</div>
+
+						<div class="da-interactions__main-shortcuts-item">
+							<a href="" class="da-interactions__main-shortcuts-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+							</a>
+							<span class="da-interactions__main-shortcuts-count">769</span>
+						</div>
+
+
+                        <!--Part is commented off because of duplicating the functional implemented in the task part 2-->
+						<!--<div class="da-interactions__main-shortcuts-item">
+							<a href="" class="da-interactions__main-shortcuts-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+							</a>
+							<span class="da-interactions__main-shortcuts-count">951</span>
+						</div>-->
+
+						<div class="da-interactions__main-shortcuts-item">
+							<a href="" class="da-interactions__main-shortcuts-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+							</a>
+							<span class="da-interactions__main-shortcuts-count">723</span>
+						</div>
+
+                        <!--Part is commented off because of duplicating the functional implemented in the task part 2-->
+						<!--<div class="da-interactions__main-shortcuts-item">
+							<a href="" class="da-interactions__main-shortcuts-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+							</a>
+							<span class="da-interactions__main-shortcuts-count">723</span>
+						</div>-->
+
+					</div>
+
+					<div class="da-interactions__buy-shortcuts">
+						<a href="" class="da-interactions__buy-shortcuts-more">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+						</a>
+						<a href="#" class="da-btn da-btn_outline">Buy from $19</a>
+					</div>
+
+				</div>
+
+				<div class="da-interactions__resize-shortcuts">
+					<a href="#" class="da-interactions__resize-shortcuts-item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/></svg>
+					</a>
+					<a href="#" class="da-interactions__resize-shortcuts-item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize-2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+					</a>
+				</div>
+
+			</section>
+
+			<section class="da-info">
+
+				<div class="da-info__wrap">
+
+					<div class="da-info__top">
+						<div class="da-info__top-author">
+							<a href="" class="da-info__top-author-link">Anjelina Green</a>
+
+							<div class="da-info__top-author-inner">
+                                <div class="da-info__top-author-avatar">
+									<img class="da-info__top-author-avatar"
+										 src="img/@1x/da-avatar.jpg"
+										 srcset="img/@1x/da-avatar.jpg 1x, img/@2x/da-avatar.jpg 2x"
+										 alt="User Avatar">
+                                </div>
+								<div class="da-info__top-author-by">
+									<div class="da-info__top-author-by-text">
+										By <a href="#" class="da-info__top-author-by-link">Bluessatan</a>
+									</div>
+									<a href="#" class="da-info__top-author-by-watch">+ Watch</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="da-info__top-stats">
+                            <p class="da-info__top-stats-views">
+                                <b class="da-info__top-stats-views-count">3.2K</b>
+                                <b>Views</b>
+                                <span>|</span>
+                                <span class="da-info__top-stats-views-perday">
+                                    <span>162</span>
+                                    <span>today</span>
+                                </span>
+                            </p>
+                            <p class="da-info__top-stats-date">Oct 26, 2017</p>
+                        </div>
+					</div>
+
+                    <div class="da-info__keys">
+
+                        <div class="da-info__keys-item">
+                            <span class="da-info__keys-item-title">Subject</span>
+                            <a href="#" class="da-info__keys-item-text">John Meller</a>
+                        </div>
+
+                        <div class="da-info__keys-item">
+                            <span class="da-info__keys-item-title">Model</span>
+                            <a href="#" class="da-info__keys-item-text">Angelina Jolie</a>
+                        </div>
+
+                        <div class="da-info__keys-item">
+                            <span class="da-info__keys-item-title">Model</span>
+                            <a href="#" class="da-info__keys-item-text">Wonder Woman</a>
+                        </div>
+
+                        <br>
+
+                        <div class="da-info__keys-item">
+                            <span class="da-info__keys-item-title">Location</span>
+                            <a href="#" class="da-info__keys-item-text">Los Angeles</a>
+                        </div>
+                    </div>
+
+				</div>
+
+			</section>
+
+            <section class="da-tags">
+                <div class="da-tags__wrap">
+
+                    <div class="da-tags__titles">
+                        <div class="da-tags__titles-item">Visual Art</div>
+                        <div class="da-tags__titles-item">Literature</div>
+                        <div class="da-tags__titles-item">Video</div>
+                    </div>
+
+					<!--Tags-->
+                    <div class="da-tags__list">
+                        <a href="#" class="da-tags__item">girl</a>
+                        <a href="#" class="da-tags__item">purple</a>
+                        <a href="#" class="da-tags__item">rain</a>
+                        <a href="#" class="da-tags__item">digitalpainting</a>
+                        <a href="#" class="da-tags__item">digitalpainting</a>
+                        <a href="#" class="da-tags__item">digitalpainting</a>
+                        <a href="#" class="da-tags__item">digitalpainting</a>
+                        <a href="#" class="da-tags__item">raimm</a>
+                        <a href="#" class="da-tags__item">cats</a>
+                        <a href="#" class="da-tags__item">dogs</a>
+                        <a href="#" class="da-tags__item">happythings</a>
+                        <a href="#" class="da-tags__item">digitalpainting</a>
+                        <a href="#" class="da-tags__item">digitalpainting</a>
+                        <a href="#" class="da-tags__item">digitalpainting</a>
+                        <a href="#" class="da-tags__item">more</a>
+                    </div>
+                </div>
+            </section>
+
+		</section>
+
+
+		<!--Sidebar-->
+		<aside class="da-sidebar">
+
+			<section class="da-sidebar__section">
+				<div class="da-sidebar__title-wrap">
+					<div class="da-sidebar__title-author">
+						More by  <a href="#" class="da-sidebar__title-author-link">Bluesssatan</a>
+					</div>
+					<a href="#" class="da-sidebar__title-link">See all</a>
+				</div>
+
+				<!--Sidebar grid #1-->
+				<div class="da-sidebar__grid">
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-001.jpg"
+							 srcset="img/@1x/preview-001.jpg 1x, img/@2x/preview-001.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-002.jpg"
+							 srcset="img/@1x/preview-002.jpg 1x, img/@2x/preview-002.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-003.jpg"
+							 srcset="img/@1x/preview-003.jpg 1x, img/@2x/preview-003.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-004.jpg"
+							 srcset="img/@1x/preview-004.jpg 1x, img/@2x/preview-004.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-005.jpg"
+							 srcset="img/@1x/preview-005.jpg 1x, img/@2x/preview-005.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-006.jpg"
+							 srcset="img/@1x/preview-006.jpg 1x, img/@2x/preview-006.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+				</div>
+			</section>
+
+			<section class="da-sidebar__section">
+				<div class="da-sidebar__title-wrap">
+					<b class="da-sidebar__title-text">Recommended for you</b>
+				</div>
+
+				<!--Sidebar grid #2-->
+				<div class="da-sidebar__grid">
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-007.jpg"
+							 srcset="img/@1x/preview-007.jpg 1x, img/@2x/preview-007.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-008.jpg"
+							 srcset="img/@1x/preview-008.jpg 1x, img/@2x/preview-008.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-009.jpg"
+							 srcset="img/@1x/preview-009.jpg 1x, img/@2x/preview-009.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-010.jpg"
+							 srcset="img/@1x/preview-010.jpg 1x, img/@2x/preview-010.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-011.jpg"
+							 srcset="img/@1x/preview-011.jpg 1x, img/@2x/preview-011.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-012.jpg"
+							 srcset="img/@1x/preview-012.jpg 1x, img/@2x/preview-012.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+				</div>
+
+				<div class="da-sidebar__title_featured">Featured in collection</div>
+			</section>
+
+			<section class="da-sidebar__section">
+				<div class="da-sidebar__title-wrap">
+					<div class="da-sidebar__title-author">
+						<b>Blue</b> by <a href="#" class="da-sidebar__title-author-link">NoaRon</a>
+					</div>
+				</div>
+
+				<!--Sidebar grid #3-->
+				<div class="da-sidebar__grid">
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-013.jpg"
+							 srcset="img/@1x/preview-013.jpg 1x, img/@2x/preview-013.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-014.jpg"
+							 srcset="img/@1x/preview-014.jpg 1x, img/@2x/preview-014.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-015.jpg"
+							 srcset="img/@1x/preview-015.jpg 1x, img/@2x/preview-015.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-016.jpg"
+							 srcset="img/@1x/preview-016.jpg 1x, img/@2x/preview-016.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-017.jpg"
+							 srcset="img/@1x/preview-017.jpg 1x, img/@2x/preview-017.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+					<a href="#" class="da-sidebar__grid-item">
+						<img class="da-sidebar__grid-item-img"
+							 src="img/@1x/preview-018.jpg"
+							 srcset="img/@1x/preview-018.jpg 1x, img/@2x/preview-018.jpg 2x"
+							 alt="Beautiful preview image">
+					</a>
+				</div>
+			</section>
+
+		</aside>
+
+	</section>
+
+
+    <!--"Add to Collection" modal-->
+	<div class="da-modal__overlay" id="modal">
+		<div class="da-modal">
+			<div class="da-modal__body">
+
+				<h3 class="da-modal__title">Add To Collection</h3>
+
+				<a href="#" class="da-modal__item da-modal__add-category-btn">Create a new collection</a>
+
+				<div class="da-modal__categories-wrap">
+
+					<div class="da-modal__item" onclick="toggleItemActive(this)">
+						<img class="da-modal__item-img"
+							 src="img/@1x/legend-001.jpg"
+							 srcset="img/@1x/legend-001.jpg 1x, img/@2x/legend-001.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+						<h4 class="da-modal__item-name">Pop Art</h4>
+						<p class="da-modal__item-count">10 deviations</p>
+					</div>
+
+					<div class="da-modal__item" onclick="toggleItemActive(this)">
+						<img class="da-modal__item-img"
+							 src="img/@1x/legend-002.jpg"
+							 srcset="img/@1x/legend-002.jpg 1x, img/@2x/legend-002.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+						<h4 class="da-modal__item-name">Films</h4>
+						<p class="da-modal__item-count">3 deviations</p>
+					</div>
+
+					<div class="da-modal__item" onclick="toggleItemActive(this)">
+						<img class="da-modal__item-img"
+							 src="img/@1x/legend-003.jpg"
+							 srcset="img/@1x/legend-003.jpg 1x, img/@2x/legend-003.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+						<h4 class="da-modal__item-name">Games</h4>
+						<p class="da-modal__item-count">5 deviations</p>
+					</div>
+
+					<div class="da-modal__item" onclick="toggleItemActive(this)">
+						<img class="da-modal__item-img"
+							 src="img/@1x/preview-009.jpg"
+							 srcset="img/@1x/preview-009.jpg 1x, img/@2x/preview-009.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+						<h4 class="da-modal__item-name">Tattoo Ideas</h4>
+						<p class="da-modal__item-count">1 deviation</p>
+					</div>
+
+				</div>
+
+				<div class="da-modal__btn-wrap">
+
+                    <!--Alternative way of showing modal favorites part-->
+					<!--<a href="#" class="da-modal__btn da-modal__btn-more" onclick="showFavorite(this)">Add More From Favorite</a>-->
+
+					<label class="da-checkbox__container">
+						Add more  deviations from Favorites
+						<input class="da-checkbox__input" type="checkbox" onclick="showFavorite()">
+						<span class="da-checkbox__checkmark"></span>
+					</label>
+
+					<div class="da-modal__btn-inner">
+						<a href="#" class="da-modal__btn da-modal__btn-save">Save</a>
+						<a href="#" class="da-modal__btn da-modal__btn-cancel" onclick="hideModal()">Cancel</a>
+					</div>
+				</div>
+
+			</div>
+
+            <!--Add to collection modal "Add from favorites" part-->
+			<div class="da-modal__favorite">
+				<h3 class="da-modal__title">More From Favorites</h3>
+				<div class="da-modal__favorite-wrap">
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-001.jpg"
+							 srcset="img/@1x/preview-001.jpg 1x, img/@2x/preview-001.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-002.jpg"
+							 srcset="img/@1x/preview-002.jpg 1x, img/@2x/preview-002.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-003.jpg"
+							 srcset="img/@1x/preview-003.jpg 1x, img/@2x/preview-003.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-004.jpg"
+							 srcset="img/@1x/preview-004.jpg 1x, img/@2x/preview-004.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-005.jpg"
+							 srcset="img/@1x/preview-005.jpg 1x, img/@2x/preview-005.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-006.jpg"
+							 srcset="img/@1x/preview-006.jpg 1x, img/@2x/preview-006.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-007.jpg"
+							 srcset="img/@1x/preview-007.jpg 1x, img/@2x/preview-007.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-008.jpg"
+							 srcset="img/@1x/preview-008.jpg 1x, img/@2x/preview-008.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-009.jpg"
+							 srcset="img/@1x/preview-009.jpg 1x, img/@2x/preview-009.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-010.jpg"
+							 srcset="img/@1x/preview-010.jpg 1x, img/@2x/preview-010.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-011.jpg"
+							 srcset="img/@1x/preview-011.jpg 1x, img/@2x/preview-011.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-012.jpg"
+							 srcset="img/@1x/preview-012.jpg 1x, img/@2x/preview-012.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-013.jpg"
+							 srcset="img/@1x/preview-013.jpg 1x, img/@2x/preview-013.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+					<div class="da-modal__favorite-item" onclick="toggleItemActive(this)">
+						<img class="da-modal__favorite-item-img"
+							 src="img/@1x/preview-014.jpg"
+							 srcset="img/@1x/preview-014.jpg 1x, img/@2x/preview-014.jpg 2x"
+							 alt="Spaceman with a beautiful background">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
