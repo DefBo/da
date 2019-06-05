@@ -1,0 +1,270 @@
+@import "../vars"
+
+.da-modal
+  height: 568px
+  display: flex
+  font-family: $font-secondary
+  &__overlay
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(250, 250, 250, .2)
+    display: flex
+    justify-content: center
+    align-items: center
+    visibility: hidden
+    opacity: 0
+    user-select: none
+    pointer-events: none
+    z-index: 40
+    transition: .15s
+  &__title
+    font-size: 20px
+    line-height: 23px
+    margin: 28px 0 20px
+    color: #fff
+    font-weight: 700
+    opacity: .9
+  &__body
+    padding: 0 32px 28px
+    flex: 1
+    height: 100%
+    box-sizing: border-box
+    overflow: hidden
+    width: 392px
+    background: $background
+    transform: translateX(151px)
+    transition: .35s
+    opacity: 0
+    visibility: hidden
+  &__item
+    display: block
+    height: 80px
+    width: 100%
+    padding: 0 16px
+    box-sizing: border-box
+    margin-bottom: 12px
+    background: #1e1e1e
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    transition: .15s
+    &:hover
+      &:before
+        background: rgba(0, 0, 0, .6)
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      display: block
+      background: rgba(0, 0, 0, .5)
+      z-index: 5
+    &:not(.da-modal__add-category-btn)
+      &:hover
+        &:after
+          opacity: 1
+          visibility: visible
+    &:not(.da-modal__add-category-btn):after
+      content: url(../img/plus.svg)
+      position: absolute
+      right: 16px
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 10
+      opacity: 0
+      visibility: hidden
+      transition: .15s
+    &:not(.da-modal__add-category-btn)
+      display: flex
+      justify-content: center
+      flex-direction: column
+    &._active
+      &:hover
+        &:after
+          content: url(../img/minus.svg)
+      &:before
+        background: rgba(11, 217, 148, .4)
+      &:after
+        content: url(../img/check.svg)
+        opacity: 1
+        visibility: visible
+    &-img
+      object-fit: cover
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+    &-count
+      font-size: 12px
+      line-height: 14px
+      position: relative
+      z-index: 10
+      margin-top: 6px
+    &-name
+      font-size: 16px
+      line-height: 16px
+      color: #fff
+      position: relative
+      z-index: 10
+      font-weight: 700
+      overflow: hidden
+      text-overflow: ellipsis
+  &__add-category-btn
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    color: #bebebe
+    background: #0F0F0F
+    font-size: 12px
+    border: 2px dashed #646464
+    transition: .15s
+    &:hover
+      border-color: $brand
+      background: #0c0c0c
+  &__categories
+    &-wrap
+      height: calc(100% - 264px)
+      overflow: auto
+      margin: 0 -35px
+      padding: 0 35px
+  &__favorite
+    width: 302px
+    padding:  0 32px 28px
+    border-left: 1px solid rgba(255, 255, 255, .1)
+    height: 100%
+    box-sizing: border-box
+    background: $background
+    opacity: 0
+    visibility: hidden
+    transition: .25s
+    &-wrap
+      font-size: 0
+      overflow: auto
+      height: calc(100% - 67px)
+      margin: 0 -32px
+      padding: 0 26px
+    &-item
+      position: relative
+      width: calc(50% - 12px)
+      height: 80px
+      display: inline-block
+      margin: 0 6px 12px
+      cursor: pointer
+      &:after
+        content: url(../img/plus.svg)
+        position: absolute
+        display: flex
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        justify-content: center
+        align-items: center
+        z-index: 10
+        opacity: 0
+        visibility: hidden
+        transition: .15s
+      &:hover
+        &:before
+          background: rgba(0, 0, 0, .2)
+        &:after
+          opacity: 1
+          visibility: visible
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: block
+        background: rgba(0, 0, 0, .1)
+        pointer-events: none
+        z-index: 1
+      &._active
+        &:hover
+          &:after
+            content: url(../img/minus.svg)
+        &:before
+          background: rgba(11, 217, 148, .4)
+        &:after
+          content: url(../img/check.svg)
+          opacity: 1
+          visibility: visible
+      &-img
+        object-fit: cover
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+  &__btn
+    border: 1px solid rgba(255, 255, 255, .3)
+    height: 44px
+    display: flex
+    align-items: center
+    border-radius: 300px
+    text-transform: uppercase
+    font-size: 12px
+    color: rgba(255, 255, 255, .8)
+    transition: .15s
+    justify-content: center
+    font-weight: 700
+    letter-spacing: 1.1px
+    &-save
+      color: $brand
+      border-color: $brand
+      &:not(._disabled):hover
+        background: $brand
+        color: #fff
+      &._disabled
+        opacity: .4
+        cursor: not-allowed
+    &-more,
+    &-cancel
+      &:not(._active):hover
+        color: #fff
+        border-color: rgba(255, 255, 255, .6)
+      &._active
+        background: #fff
+        color: #000
+        &:hover
+          opacity: .75
+    &-wrap
+      padding-top: 15px
+      text-align: center
+    &-inner
+      display: flex
+      justify-content: space-between
+      margin-top: 20px
+      .da-modal__btn
+        flex: 1
+      .da-modal__btn + .da-modal__btn
+        margin-left: 15px
+
+._show-fav
+  .da-modal__body
+    transform: none
+  .da-modal__favorite
+    opacity: 1
+    visibility: visible
+
+._popup-open
+  overflow: hidden
+  .da-modal__overlay
+    visibility: visible
+    opacity: 1
+    user-select: auto
+    pointer-events: auto
+  .da-modal__body
+    visibility: visible
+    opacity: 1
+
+

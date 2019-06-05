@@ -1,0 +1,174 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Laptop */
+@media only screen and (max-width : 1440px)
+  //
+
+@media only screen and (max-width : 1280px)
+  .da-interactions__main, .da-info__wrap, .da-tags__wrap
+    width: 70%
+  .da-interactions__main-shortcuts-item+.da-interactions__main-shortcuts-item
+    margin-left: 15px
+  .da-interactions__award
+    font-size: 9px
+    width: 62px
+  .da-interactions__resize-shortcuts
+    width: 88px
+  .da-user-actions__item
+    margin: 0 10px
+  .da-nav__item
+    padding: 0 16px
+  .da-slider__inner
+    height: 350px
+
+/* Tablet */
+@media only screen and (max-width : 1024px)
+  .da-content
+    height: auto
+    flex-direction: column
+  .da-sidebar
+    width: auto
+    padding: 15px 0 0
+    position: absolute
+    left: 0
+    right: 0
+    top: 518px
+    z-index: 20
+  .da-sidebar__title-wrap
+    margin: 0 0 15px
+    padding: 0 15px
+  .da-sidebar__section
+    overflow: hidden
+    &:not(:first-child)
+      display: none
+  .da-sidebar__grid
+    overflow: auto
+    white-space: nowrap
+    padding: 0 15px 15px
+  .da-sidebar__grid-item
+    width: calc(16.667% - 6px)
+    min-width: 130px
+  .da-main
+    z-index: 10
+  .da-slider
+    padding-bottom: 187px
+  .da-nav__inner
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    top: 0
+    background: #000
+    padding: 35% 0
+    box-sizing: border-box
+    font-size: 14px
+    visibility: hidden
+    opacity: 0
+    z-index: 100
+    transition: .25s
+    pointer-events: none
+    user-select: none
+    justify-content: space-around
+    flex-direction: column
+    align-items: center
+    width: 100%
+    height: 100%
+  .da-nav__item
+    padding: 10px !important
+  .da-user-actions
+    flex: 1
+    justify-content: flex-end
+  ._show-nav
+    .da-nav__inner
+      visibility: visible
+      opacity: 1
+      pointer-events: auto
+      user-select: auto
+  .da-nav__burger-btn, .da-nav__close-btn
+    display: block
+
+/* Note */
+@media only screen and (max-width : 768px)
+  .da-info__wrap, .da-tags__wrap
+    width: 100%
+  .da-interactions__main
+    width: auto
+    padding: 0 20px
+    flex: 1
+  .da-interactions__resize-shortcuts
+    width: auto
+
+@media only screen and (max-width : 680px)
+  .da-user-actions__item:nth-child(2),
+  .da-user-actions__item:nth-child(3),
+  .da-user-actions__item:nth-child(4)
+    display: none
+  .da-header .da-btn
+    padding: 0 5px
+    margin-left: 10px
+  .da-logo__link
+    padding-right: 15px
+  .da-slider__inner
+    height: 210px
+  .da-sidebar
+    top: 360px
+  .da-slider
+    padding-bottom: 169px
+  .da-backto
+    padding: 12px 0
+  .da-nav__close-btn
+    top: 0
+    right: 0
+
+@media only screen and (max-width : 560px)
+  .da-interactions__main-shortcuts
+    display: none
+  .da-interactions__buy-shortcuts
+    flex-direction: row-reverse
+    justify-content: space-between
+    flex: 1
+  .da-interactions__buy-shortcuts .da-interactions__buy-shortcuts-more + .da-btn
+    margin-left: 0
+
+/* Phone */
+@media only screen and (max-width : 480px)
+  //
+
+@media only screen and (max-width : 420px)
+  .da-info__top
+    flex-direction: column
+  .da-info__top-stats
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+  .da-info__top-stats-views
+    margin-top: 14px
+  .da-slider__inner
+    height: 170px
+  .da-sidebar
+    top: 314px
+  .da-user-actions__item:first-child
+    display: none
+  .da-slider__btn_prev
+    left: -10px
+  .da-slider__btn_next
+    right: -10px
+  .da-interactions__award
+    display: none
+  .da-interactions__main
+    padding-left: 0
+
+/* Small phone */
+@media only screen and (max-width : 320px)
+  //
+
+/* Horizontal mode fixes */
+@media only screen and (max-height : 655px)
+  .da-nav__inner
+    padding: 20vh 0
+  &._show-nav
+    .da-sidebar
+      display: none
+

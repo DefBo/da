@@ -1,0 +1,41 @@
+.da-slider
+  padding-bottom: 50px
+  position: relative
+  z-index: 30
+  &__wrap
+    position: relative
+  &__inner
+    height: 450px
+    max-width: 77%
+    margin: 0 auto
+  &__item
+    display: none
+    justify-content: center
+    align-items: center
+    height: 100%
+    animation-name: fade
+    animation-duration: 1.5s
+    &-img
+      max-width: 100%
+      max-height: 100%
+  &__btn
+    cursor: pointer
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    padding: 10px 5px
+    transition: opacity .15s
+    border-radius: 0 3px 3px 0
+    user-select: none
+    &:hover
+      opacity: .75
+    &_prev
+      left: 0
+      .da-slider__i
+        transform: rotate(180deg)
+    &_next
+      right: 0
+  &__i
+    width: 22px
+    height: 40px
+    display: flex

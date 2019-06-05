@@ -1,0 +1,92 @@
+@import "../vars"
+
+.da-interactions
+  padding: 0 15px
+  margin: 0 -15px
+  height: 56px
+  border-top: 1px solid #101319
+  border-bottom: 1px solid #101319
+  display: flex
+  justify-content: space-between
+  position: relative
+  z-index: 30
+  font-size: 10px
+  &__award
+    position: relative
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    width: 72px
+    height: 100%
+    text-transform: uppercase
+    font-size: 11px
+    padding-left: 26px
+    &-icon
+      width: 26px
+      height: 57px
+      position: absolute
+      left: 0
+      bottom: -1px
+      z-index: 50
+      background: $brand
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(88,198,148,1) 100%)
+      display: flex
+      justify-content: center
+      align-items: center
+      &:before, &:after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -7px
+        width: 0
+        height: 0
+        border-style: solid
+      &:before
+        left: 0
+        border-width: 7px 13px 0 0
+        border-color: #58c694 transparent transparent transparent
+      &:after
+        right: 0
+        border-width: 0 13px 7px 0
+        border-color: transparent #58c694 transparent transparent
+  &__main
+    width: 52%
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-shortcuts
+      display: flex
+      align-items: center
+      &-item
+        display: flex
+        align-items: center
+        & + &
+          margin-left: 22px
+      &-count
+        margin-left: 10px
+        cursor: default
+      &-link
+        transition: opacity .15s
+        &:hover
+          opacity: .75
+  &__buy-shortcuts
+    display: flex
+    align-items: center
+    .da-interactions__buy-shortcuts-more
+      transition: opacity .15s
+      &:hover
+        opacity: .75
+    .da-interactions__buy-shortcuts-more + .da-btn
+      margin-left: 20px
+  &__resize-shortcuts
+    width: 98px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    &-item
+      transition: opacity .15s
+      &:hover
+        opacity: .75
+      & + &
+        margin-left: 18px

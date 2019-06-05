@@ -1,0 +1,63 @@
+@import "../vars"
+
+.da-sidebar
+  width: 270px
+  background: $sidebar-bg
+  padding: 20px 15px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  overflow: auto
+  &__section
+    &:first-child
+      .da-sidebar__title-wrap
+        margin-top: 0
+  &__title
+    &-wrap
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      margin-bottom: 20px
+      font-size: 12px
+      margin-top: 25px
+      &-link
+        font-weight: 700
+    &-link
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 11px
+      font-family: $font-secondary
+      transition: .15s
+      &:hover
+        opacity: .75
+    &_featured
+      letter-spacing: 1.1px
+      text-transform: uppercase
+      opacity: .75
+      font-family: $font-secondary
+      margin-top: 28px
+      font-size: 11px
+    &-author-link
+      font-weight: 700
+      transition: .15s
+      &:hover
+        opacity: .75
+  &__grid
+    font-size: 0
+    margin: -3px
+    &-item
+      display: inline-block
+      margin: 3px
+      width: calc(50% - 6px)
+      height: 80px
+      position: relative
+      overflow: hidden
+      transition: .25s
+      outline-color: transparent
+      &:hover
+        outline: 1px solid $white
+      &-img
+        object-fit: cover
+        position: absolute
+        height: 100%
+        width: 100%

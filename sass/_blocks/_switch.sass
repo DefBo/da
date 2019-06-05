@@ -1,0 +1,62 @@
+@import "../vars"
+
+/* The switch - the box around the slider */
+.da-switch
+  position: relative
+  display: block
+  width: 30px
+  height: 17px
+  margin-right: 171px
+  &:hover
+    &:after
+      color: rgba(255, 255, 255, 1)
+  &:after
+    content: 'Switch to Light Theme'
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 40px
+    line-height: 30px
+    white-space: nowrap
+    color: rgba(255, 255, 255, .8)
+    cursor: pointer
+    transition: .15s
+
+/* Hide default HTML checkbox */
+.da-switch .da-switch__input
+  opacity: 0
+  width: 0
+  height: 0
+
+/* The slider */
+.da-switch__slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #ccc
+  transition: .4s
+  border-radius: 34px
+
+
+.da-switch__slider:before
+  position: absolute
+  content: ""
+  height: 13px
+  width: 13px
+  left: 2px
+  bottom: 2px
+  background-color: white
+  transition: .4s
+  border-radius: 50%
+
+.da-switch__input:checked + .da-switch__slider
+  background-color: $brand
+
+.da-switch__input:focus + .da-switch__slider
+  box-shadow: 0 0 1px $brand
+
+.da-switch__input:checked + .da-switch__slider:before
+  transform: translateX(13px)

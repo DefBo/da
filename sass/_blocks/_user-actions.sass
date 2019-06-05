@@ -1,0 +1,48 @@
+@import "../vars"
+
+.da-user-actions
+  padding: 0 20px
+  display: flex
+  align-items: center
+  position: relative
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 1px
+    height: 28px
+    background: #202127
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+  &__item
+    display: flex
+    padding: 5px
+    margin: 0 15px
+    transition: opacity .15s
+    position: relative
+    cursor: pointer
+    &:not(&_user)
+      &:hover
+        opacity: .75
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    &-premium
+      display: flex
+      justify-content: center
+      align-items: center
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 14px
+      height: 14px
+      background: #ffe9e4
+      border-radius: 50%
+      border: 2px solid $black
+  &__img
+    display: block
+    max-width: 28px
+    max-height: 28px
+    border: 1px solid #252827

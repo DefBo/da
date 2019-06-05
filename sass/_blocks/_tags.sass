@@ -1,0 +1,53 @@
+@import "../vars"
+
+.da-tags
+  padding: 35px 0 14px
+  display: flex
+  justify-content: center
+  &__wrap
+    width: 52%
+  &__titles
+    margin: 0 -10px
+    & + .da-tags__list
+      margin-top: 20px
+    &-item
+      display: inline-block
+      position: relative
+      margin: 0 10px
+      font-size: 14px
+      font-weight: 700
+      & + &
+        margin-left: 11px
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          top: 50%
+          left: -11px
+          transform: translateY(-50%)
+          width: 1px
+          height: 11px
+          background: $white
+  &__list
+    margin: 0 -3px
+    font-size: 0
+  &__item
+    font-size: 12px
+    color: rgba(255, 255, 255, .75)
+    display: inline-block
+    padding: 0 12px
+    height: 32px
+    line-height: 32px
+    background: #101319
+    margin: 0 3px 6px
+    cursor: pointer
+    transition: .15s
+    &:last-child
+      text-transform: uppercase
+      letter-spacing: 1.1px
+      font-family: $font-secondary
+      color: $white
+      font-size: 10px
+    &:hover
+      color: #101319
+      background: $white
